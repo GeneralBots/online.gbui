@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "pragmatismo.cloud": {
+      "appLocation": ".",
+      "outputLocation": "dist",
+      "appName": "GeneralBots",
+      "resourceGroup": "PROD-WebSites"
+    }
+  }
+}
