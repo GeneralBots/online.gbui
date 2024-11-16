@@ -9,18 +9,15 @@ import {
   StyleSheet,
 } from 'react-native';
 import { ClerkProvider, ClerkLoaded } from '@clerk/clerk-expo';
-import { NavigationContainer, useNavigation, useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StatusBar } from 'expo-status-bar';
-import EmailConfirmation from '../screens/EmailConfirmation';
-import Finalization from '../screens/Finalization';
-import Success from '../screens/Success';
-import WaitingList from '../screens/WaitingList';
 import { globalStyles } from '../styles.js';
 import { styled } from 'nativewind';
-import Constants from 'expo-constants';
 import AuthenticationScreen from './authentication';
 import ChatScreen from './chat';
+import MailPage from './mail';
+import DashboardPage from './dashboard';
 
 const Stack = createStackNavigator();
 const StyledView = styled(View);
@@ -130,12 +127,12 @@ function RootLayout() {
                 {/* Add placeholder screens for other routes */}
                 <Stack.Screen
                   name="dashboard"
-                  component={() => <Text>Dashboard Screen (Placeholder)</Text>}
+                  component={WrapWithExampleCodeLink(DashboardPage)}
                   options={{ title: "Dashboard" }}
                 />
                 <Stack.Screen
                   name="mail"
-                  component={() => <Text>Mail Screen (Placeholder)</Text>}
+                  component={WrapWithExampleCodeLink(MailPage)}
                   options={{ title: "Mail" }}
                 />
                 <Stack.Screen
