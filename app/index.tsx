@@ -17,19 +17,21 @@ import { styled } from 'nativewind';
 import AuthenticationScreen from './authentication';
 import ChatScreen from './chat';
 import MailPage from './mail';
-import DashboardPage from './dashboard';
+import DashboardPage from './login/index.js';
+import TaskPage from './tasks';
 
 const Stack = createStackNavigator();
 const StyledView = styled(View);
 
 const examples = [
-  { name: "Authentication", href: "authentication" },
+  { name: "Login", href: "login" },
   { name: "Dashboard", href: "dashboard" },
   { name: "Chat", href: "chat" },
   { name: "Mail", href: "mail" },
   { name: "Drive", href: "drive" },
   { name: "Tasks", href: "tasks" },
   { name: "Meet", href: "meet" },
+  { name: "Templates", href: "templates" },
 ];
 
 interface ExamplesNavProps {
@@ -142,7 +144,7 @@ function RootLayout() {
                 />
                 <Stack.Screen
                   name="tasks"
-                  component={() => <Text>Tasks Screen (Placeholder)</Text>}
+                  component={WrapWithExampleCodeLink(TaskPage)}
                   options={{ title: "Tasks" }}
                 />
                 <Stack.Screen

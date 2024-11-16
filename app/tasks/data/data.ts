@@ -1,13 +1,4 @@
-import {
-  ArrowDown,
-  ArrowRight,
-  ArrowUp,
-  CheckCircle,
-  Circle,
-  CircleOff,
-  HelpCircle,
-  Timer,
-} from "lucide-react"
+import { Ionicons } from '@expo/vector-icons';
 
 export const labels = [
   {
@@ -28,27 +19,27 @@ export const statuses = [
   {
     value: "backlog",
     label: "Backlog",
-    icon: HelpCircle,
+    icon: 'help-circle-outline',
   },
   {
     value: "todo",
     label: "Todo",
-    icon: Circle,
+    icon: 'ellipse-outline',
   },
   {
     value: "in progress",
     label: "In Progress",
-    icon: Timer,
+    icon: 'timer-outline',
   },
   {
     value: "done",
     label: "Done",
-    icon: CheckCircle,
+    icon: 'checkmark-circle-outline',
   },
   {
     value: "canceled",
     label: "Canceled",
-    icon: CircleOff,
+    icon: 'close-circle-outline',
   },
 ]
 
@@ -56,17 +47,16 @@ export const priorities = [
   {
     label: "Low",
     value: "low",
-    icon: ArrowDown,
+    icon: 'arrow-down-outline',
   },
   {
     label: "Medium",
     value: "medium",
-    icon: ArrowRight,
+    icon: 'arrow-forward-outline',
   },
   {
     label: "High",
     value: "high",
-    icon: ArrowUp,
+    icon: 'arrow-up-outline',
   },
 ]
-
