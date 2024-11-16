@@ -17,8 +17,10 @@ import { styled } from 'nativewind';
 import AuthenticationScreen from './authentication';
 import ChatScreen from './chat';
 import MailPage from './mail';
-import DashboardPage from './login/index.js';
+import DashboardPage from './login';
 import TaskPage from './tasks';
+import SettingsProfilePage from './settings';
+import TemplatesPage from './templates';
 
 const Stack = createStackNavigator();
 const StyledView = styled(View);
@@ -32,6 +34,8 @@ const examples = [
   { name: "Tasks", href: "tasks" },
   { name: "Meet", href: "meet" },
   { name: "Templates", href: "templates" },
+  { name: "Settings", href: "settings" },
+  
 ];
 
 interface ExamplesNavProps {
@@ -121,11 +125,11 @@ function RootLayout() {
                   component={WrapWithExampleCodeLink(AuthenticationScreen)}
                   options={{ title: "Authentication" }}
                 />
-                <Stack.Screen
+                 <Stack.Screen
                   name="chat"
                   component={WrapWithExampleCodeLink(ChatScreen)}
                   options={{ title: "Chat" }}
-                />
+                /> 
                 {/* Add placeholder screens for other routes */}
                 <Stack.Screen
                   name="dashboard"
@@ -152,6 +156,17 @@ function RootLayout() {
                   component={() => <Text>Meet Screen (Placeholder)</Text>}
                   options={{ title: "Meet" }}
                 />
+                <Stack.Screen
+                  name="templates"
+                  component={WrapWithExampleCodeLink(TemplatesPage)}
+                  options={{ title: "Templates" }}
+                />
+                <Stack.Screen
+                  name="settings"
+                  component={WrapWithExampleCodeLink(SettingsProfilePage)}
+                  options={{ title: "Settings" }}
+                />
+  
               </Stack.Navigator>
             </SafeAreaView>
          
