@@ -19,7 +19,7 @@ import ChatScreen from './chat';
 import MailPage from './mail';
 import DashboardPage from './login';
 import TaskPage from './tasks';
-import SettingsProfilePage from './settings';
+import SettingsProfilePage from './settings/index.js';
 import TemplatesPage from './templates';
 
 const Stack = createStackNavigator();

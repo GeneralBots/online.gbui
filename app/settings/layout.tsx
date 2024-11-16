@@ -5,23 +5,23 @@ import { SidebarNav } from './components/sidebar-nav';
 const sidebarNavItems = [
   {
     title: "Profile",
-    href: "/examples/forms",
+    href: "/setttings",
   },
   {
     title: "Account",
-    href: "/examples/forms/account",
+    href: "/setttings/account",
   },
   {
     title: "Appearance",
-    href: "/examples/forms/appearance",
+    href: "/setttings/appearance",
   },
   {
     title: "Notifications",
-    href: "/examples/forms/notifications",
+    href: "/setttings/notifications",
   },
   {
     title: "Display",
-    href: "/examples/forms/display",
+    href: "/setttings/display",
   },
 ];
 
