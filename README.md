@@ -19,3 +19,15 @@
 - [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+
+# Mail 
+Stalwart
+
+# Drive
+
+Garage
+
+# Chat 
+
+RPC-like

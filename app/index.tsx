@@ -15,11 +15,10 @@ import { StatusBar } from 'expo-status-bar';
 import { globalStyles } from '../styles.js';
 import { styled } from 'nativewind';
 import AuthenticationScreen from './authentication';
-import ChatScreen from './chat';
+import {Chat} from './chat';
 import MailPage from './mail';
 import DashboardPage from './login';
 import TaskPage from './tasks';
-import SettingsProfilePage from './settings/index.js';
 import TemplatesPage from './templates';
 
 const Stack = createStackNavigator();
@@ -127,7 +126,7 @@ function RootLayout() {
                 />
                  <Stack.Screen
                   name="chat"
-                  component={WrapWithExampleCodeLink(ChatScreen)}
+                  component={WrapWithExampleCodeLink(Chat)}
                   options={{ title: "Chat" }}
                 /> 
                 {/* Add placeholder screens for other routes */}
@@ -161,12 +160,7 @@ function RootLayout() {
                   component={WrapWithExampleCodeLink(TemplatesPage)}
                   options={{ title: "Templates" }}
                 />
-                <Stack.Screen
-                  name="settings"
-                  component={WrapWithExampleCodeLink(SettingsProfilePage)}
-                  options={{ title: "Settings" }}
-                />
-  
+                  
               </Stack.Navigator>
             </SafeAreaView>
          
