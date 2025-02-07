@@ -31,3 +31,23 @@ Garage
 # Chat 
 
 RPC-like
+
+
+# Setup VM
+
+## Install RDP and XFCE on Ubuntu 
+sudo apt update && sudo apt install -y xfce4 xfce4-goodies xrdp && echo "xfce4-session" > ~/.xsession && sudo sed -i 's/^exec/#exec/' /etc/xrdp/startwm.sh && echo "exec startxfce4" | sudo tee -a /etc/xrdp/startwm.sh && sudo systemctl enable --now xrdp 
+
+## Stalwart 
+
+curl --proto '=https' --tlsv1.2 -sSf https://get.stalw.art/install.sh -o install.sh 
+sudo sh install.sh /path/to/install 
+
+## Chrome 
+
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add - sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list' sudo apt update sudo apt install google-chrome-stable 
+
+# Ngix
+sudo apt install -y nginx
+sudo systemctl enable --now nginx
+
